@@ -1,0 +1,25 @@
+@forward "element-plus/theme-chalk/src/common/var.scss" with ($colors: (
+	"primary": ("base": #42bc7f),
+	"success": ("base": green),
+	"warning": ("base": #FF771C),
+	"danger": ("base": #ff3030),
+	"error": ("base": #ff3030),
+	"info": ("base": #9e9e9e),
+));
+
+
+.message-box-no-footer{
+	.el-message-box__header{
+		padding: 0;
+	}
+	.el-message-box__btns{
+		padding: 0;
+	}
+}
+.el-date-picker,.el-date-picker *{
+	font-size: 14px;
+}
+
+.el-input__wrapper {
+	font-size: 14px;
+}

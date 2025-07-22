@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: normal;
+	font-size: 16px;
+	font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+html, body, #app {
+	height: 100%;
+	width: 100%;
+}
+
+/* 滚动条整体样式 */
+.el-scrollbar__wrap::-webkit-scrollbar {
+	width: 8px; /* 宽度 */
+	height: 8px; /* 横向滚动条高度 */
+}
+
+/* 滚动条轨道 */
+.el-scrollbar__wrap::-webkit-scrollbar-track {
+	background: #f2f2f2; /* 轨道背景颜色 */
+	border-radius: 4px;
+}
+
+/* 滚动条滑块 */
+.el-scrollbar__wrap::-webkit-scrollbar-thumb {
+	background-color: #c1c1c1; /* 滑块颜色 */
+	border-radius: 4px;
+	border: 2px solid #f2f2f2; /* 滑块周围的间距 */
+}
+
+/* 滚动条滑块在 hover 时的样式 */
+.el-scrollbar__wrap::-webkit-scrollbar-thumb:hover {
+	background-color: #b0b0b0;
+}
+
+/* 展览表格 */
+.el-table thead tr th {
+	background-color: #d9f0e8 !important;
+	color: #333;
+}
+
+.el-pagination .btn-prev .el-icon, .el-pagination .btn-next .el-icon {
+	font-size: inherit !important;
+}
+// 用于xml hsv3 定义多行文字超出
+.goods_text_hsv3_base{
+	font-size: 12px;
+	color: #fff;
+	line-height: 18px;
+	overflow: hidden!important;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	word-break: break-all;
+	div{
+		font-size: 12px!important;
+		display: block!important;
+		position: relative!important;
+	}
+}

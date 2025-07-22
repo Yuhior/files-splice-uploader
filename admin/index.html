@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="/logo-small-green.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>%VITE_TITLE%</title>
+  <style>
+      .loading-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+      }
+
+      .dark .loading-container {
+          background-color: #232324;
+          color: rgba(255, 255, 255, 0.9);
+      }
+      .loader {
+          --gap: 12px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: var(--gap);
+          width: 40px;
+          aspect-ratio: 1;
+          position: relative;
+      }
+      .loader:before,
+      .loader:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: -8px 0 0 -8px;
+          width: 16px;
+          aspect-ratio: 1;
+          background: #3FB8AF;
+          animation:
+                  l1-1 2s  infinite,
+                  l1-2 .5s infinite;
+      }
+      .loader:after {
+          background:#FF3D7F;
+          animation-delay: -1s,0s;
+      }
+      @keyframes l1-1 {
+          0%   {top:0   ;left:0}
+          25%  {top:100%;left:0}
+          50%  {top:100%;left:100%}
+          75%  {top:0   ;left:100%}
+          100% {top:0   ;left:0}
+      }
+      @keyframes l1-2 {
+          80%,100% {transform: rotate(0.5turn)}
+      }
+  </style>
+
+</head>
+<body>
+<div id="app">
+  <div class="loading-container">
+    <div class="loader"></div>
+  </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

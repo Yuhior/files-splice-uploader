@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && node ./dist/main.js",
+    "start": "tsc dist/index.ts",
+    "dev": "nodemon --watch src -e ts,tsx --exec ts-node src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@types/koa-router": "^7.4.8",
+    "@types/mysql": "^2.15.27",
+    "koa": "^3.0.0",
+    "koa-body": "^6.0.1",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^13.0.1",
+    "multer": "^2.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
